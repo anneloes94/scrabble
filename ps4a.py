@@ -12,6 +12,7 @@ SCRABBLE_LETTER_VALUES = {
 }
 
 
+
 # -----------------------------------
 # Helper code
 # (you don't need to understand this helper code)
@@ -32,7 +33,7 @@ def loadWords():
     wordList = []
     for line in inFile:
         wordList.append(line.strip().lower())
-    print("  ", len(wordList), "words loaded.")
+    print(str(len(wordList)) + " words loaded.\n")
     return wordList
 
 def getFrequencyDict(sequence):
@@ -102,8 +103,8 @@ def displayHand(hand):
     """
     for letter in hand.keys():
         for j in range(hand[letter]):
-             print(letter,end=" ")       # print all on the same line
-    print()                             # print an empty line
+             print(letter + " ")       # print all on the same line
+    print("\n")                             # print an empty line
 
 #
 # Problem #2: Make sure you understand how this function works and what it does!
@@ -239,11 +240,11 @@ def playHand(hand, wordList, n):
     while calculateHandlen(hand) > 0:
             
         # Display the hand
-        print('Current Hand: ', end="") 
+        print('Current Hand: ' + "") 
         displayHand(hand)
        
         # Ask user for input
-        word = input("Enter word, or a \".\" to indicate that you are finished: ")
+        word = raw_input("Enter word, or a \".\" to indicate that you are finished: ")
         
         # If the input is a single period:
         if word == ".":
@@ -307,7 +308,7 @@ def playGame(wordList):
     n = HAND_SIZE
   
     while True: 
-        nre = input("Enter n to deal a new hand, r to replay the last hand, or e to end game: ")
+        nre = raw_input("Enter n to deal a new hand, r to replay the last hand, or e to end game: ")
     
         if nre == "n":
             hand = dealHand(n)
