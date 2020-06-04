@@ -68,7 +68,7 @@ def compPlayHand(hand, wordList, n):
     # As long as there are still letters left in the hand:
     while (calculateHandlen(hand) > 0) :
         # Display the hand
-        print("Current Hand: ", end=' ')
+        print("Current Hand: " + ' ')
         displayHand(hand)
         # computer's word
         word = compChooseWord(hand, wordList, n)
@@ -129,11 +129,11 @@ def playGame(wordList):
     n = HAND_SIZE
   
     while True: 
-        nre = input("Enter n to deal a new hand, r to replay the last hand, or e to end game: ")
+        nre = raw_input("Enter n to deal a new hand, r to replay the last hand, or e to end game: ")
     
         if nre == "n":
             hand = dealHand(n)
-            cu = input("Enter u to have yourself play, c to have the computer play: ")
+            cu = raw_input("Enter u to have yourself play, c to have the computer play: ")
             if cu == "c":
                 compPlayHand(hand, wordList, n)
                 numberOfTimesPlayed += 1
@@ -150,7 +150,7 @@ def playGame(wordList):
             if numberOfTimesPlayed == 0:
                 print("You have not played a hand yet. Please play a new hand first!")
             else:
-                cu = input("Enter u to have yourself play, c to have the computer play: ")
+                cu = raw_input("Enter u to have yourself play, c to have the computer play: ")
                 if cu == "c":
                     compPlayHand(hand, wordList, n)
                     numberOfTimesPlayed += 1
