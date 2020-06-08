@@ -310,11 +310,6 @@ def playGame(wordList):
         else: print("Invalid command.")
         
     return
-
-
-
-wordList = loadWords()
-playGame(wordList)
     
 
 # Build data structures used for entire session and play game

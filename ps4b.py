@@ -139,7 +139,7 @@ def playGame(wordList):
             else: 
                 print ("Invalid command")
                 continue
-            # ASK SAMER: how do we go from here to input cu again?
+            # How do we go from here to input cu again?
                             # Break in while loop at if and else
         
         elif nre == "r":
@@ -164,9 +164,6 @@ def playGame(wordList):
         
     return
 
-wordList = loadWords()
-playGame(wordList)
-      
 
 # Build data structures used for entire session and play game
 
